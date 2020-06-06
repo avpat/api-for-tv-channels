@@ -11,7 +11,10 @@ class Programme extends Model
 
     public function channel()
     {
-
         return $this->belongsTo(Channel::class);
+    }
+
+    public function timetable()
+    {
     }
 }

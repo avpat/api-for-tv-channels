@@ -11,7 +11,8 @@ GRANT ALL PRIVILEGES ON `simplestream`.* TO 'homestead'@'localhost';
 -- 2 . migrate
 
 docker-compose exec php php artisan migrate
-
+---
+composer dump-autoload
 
 --- add code sniffer for psr12 standards
 composer require squizlabs/php_codesniffer --dev
@@ -21,6 +22,7 @@ composer require squizlabs/php_codesniffer --dev
     
 -- migrate and seed
     docker-compose exec php php artisan make:seed  ChannelTableSeeder
+    docker-compose exec php php artisan make:seed ProgrammeTableSeeder
     docker-compose exec php php artisan migrate
     docker-compose exec php php artisan db:seed
 
@@ -41,3 +43,7 @@ composer require squizlabs/php_codesniffer --dev
 
 ----
 composer require goldspecdigital/laravel-eloquent-uuid:^7.0
+
+> factory(App\Programme::class, 5)->create();
+
+

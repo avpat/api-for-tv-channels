@@ -24,3 +24,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/channels', function(){
     return new \App\Http\Resources\ChannelResource(\App\Channel::all());
 });
+
+/**
+ * task 2: Get Programm timetable for selected channel, selected date and timezone
+ * i.e.
+ */
+
+Route::get('/channels/', function(){
+    return new \App\Http\Resources\ChannelResource(\App\Channel::all());
+});

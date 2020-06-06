@@ -18,4 +18,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/channels', 'ChannelController@showAll');
+/**
+ * task 1: create an get api for the channels
+ */
+Route::get('/channels', function(){
+    return new \App\Http\Resources\ChannelResource(\App\Channel::all());
+});

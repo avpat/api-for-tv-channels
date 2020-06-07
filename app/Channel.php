@@ -5,6 +5,10 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use GoldSpecDigital\LaravelEloquentUUID\Database\Eloquent\Uuid;
 
+/**
+ * Class Channel
+ * @package App
+ */
 class Channel extends Model
 {
     use Uuid;
@@ -16,7 +20,9 @@ class Channel extends Model
 
     public $incrementing = false; // for uuid, as Eloquent assumes that the primary key is an incrementing integer value
 
-    //channel has many programmes
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
     public function programmes()
     {
         return $this->hasMany(Programme::class);

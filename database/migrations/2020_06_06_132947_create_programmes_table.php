@@ -15,7 +15,7 @@ class CreateProgrammesTable extends Migration
     {
 
         Schema::create('programmes', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->uuid('id')->primary();
             $table->string('name');
             $table->text('description');
             $table->string('thumbnail');

@@ -55,6 +55,23 @@ class ChannelController extends Controller
     }
 
     /**
+     *
+     *
+     * @param $channelUid
+     * @param $programmeUid
+     * @return ChannelResource
+     *
+     */
+    public function getInformation($channelUid, $programmeUid)
+    {
+        $information = Programme::where('channel_id', $channelUid)
+            ->where('id', $programmeUid)
+            ->get();
+
+        return new ChannelResource($information);
+    }
+
+    /**
      * calculate time difference in seconds
      *
      * @param $start

@@ -8,10 +8,8 @@ use Faker\Generator as Faker;
 
 $factory->define(Programme::class, function (Faker $faker) {
 
-    static $number = 1;
-
     return [
-        'id' => $number++,
+        'id' => $faker->uuid,
         'name' => $faker->word,
         'description'   => $faker->sentence,
         'thumbnail'  => $faker->imageUrl(),

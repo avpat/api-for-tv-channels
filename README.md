@@ -1,25 +1,24 @@
 ## Code Test
 
 
-The repo should have following requested items
+What is included in this repo?
 - Completed code
 - EER diagram
 - Postman file [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/75865b4398b822df3597)
-- Installation guide (docker, laravel and database)
-- .env files
 - Database migrations and seedrs
-- Sample links
 - basic unit tests
-- 
+- Installation guide (docker, laravel and database)
+- .env files will be emailed to you(if needed)
 
 **if above postman button doesn't work then please let me or Agency know**
 <https://www.getpostman.com/collections/75865b4398b822df3597>
 
 Installation instructions
 1. Clone the repo via this url git@https://github.com/swaami/simplestream-api-test
-2. Get inside the project folder
+2. Get inside the project folder and run ``composer update``
 3. Create a .env file by running the following command cp .env.example .env. Update your database credentials inside this .env file.
 4. Install various packages and dependencies: composer install. Note: you have to be inside your Laravel development environment for this to work. 
+5. Run `` docker-compose build && docker-compose up -d`` (please refer to section below if any problem persists)
 5. Generate an encryption key for the app: php artisan key:generate.
 6. Run migrations and seed database with some sample data: php artisan migrate:refresh --seed.
 7. You are now good to go.
@@ -47,7 +46,7 @@ The project uses following environment
 - if any issue occurs check folder perssions from the docker desktop
 - if everything ok then execute ``docker-compose exec php php artisan config:cache``
 
-##composer
+##composer(already added these packages)
 - add code sniffer for psr12 standards checking
 ``composer require squizlabs/php_codesniffer --dev``
 - to check PSR12 standards run ``./vendor/bin/phpcs app/ --standard=PSR12``

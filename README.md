@@ -35,7 +35,8 @@ The project uses following environment
 - codesniffer
 - goldspecdigital/laravel-eloquent-uuid
 
-##Detailed Installation
+##Docker Installation(optional)
+- In case, you do not have docker or vagrant installed then follow these steps. If you've working environment then simply ignore docker installation steps and ``docker-compose exec php`` from all command below. 
 - Run a docker desktop on your machine
 - Goto your development folder and download this code
 - Run a docker build command and it should copy all the required images

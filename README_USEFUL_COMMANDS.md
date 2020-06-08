@@ -1,3 +1,21 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##Some useful commands used during the development
+
 docker-compose exec php php artisan key:generate
 docker-compose exec php php artisan config:cache
 
@@ -47,3 +65,7 @@ composer require goldspecdigital/laravel-eloquent-uuid:^7.0
 > factory(App\Programme::class, 5)->create();
 
 
+-----
+
+PHPUNIT
+ docker-compose exec php php artisan test

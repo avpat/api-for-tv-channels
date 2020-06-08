@@ -1,4 +1,4 @@
-## SimpleStreams Code Test
+## Code Test
 
 
 The repo should have following requested items

@@ -13,7 +13,18 @@ The repo should have following requested items
 - 
 
 **if above postman button doesn't work then please let me or Agency know**
+<https://www.getpostman.com/collections/75865b4398b822df3597>
 
+Installation instructions
+1. Clone the repo via this url git@https://github.com/swaami/simplestream-api-test
+2. Get inside the project folder
+3. Create a .env file by running the following command cp .env.example .env. Update your database credentials inside this .env file.
+4. Install various packages and dependencies: composer install. Note: you have to be inside your Laravel development environment for this to work. 
+5. Generate an encryption key for the app: php artisan key:generate.
+6. Run migrations and seed database with some sample data: php artisan migrate:refresh --seed.
+7. You are now good to go.
+
+##Additional Information: 
 
 The project uses following environment 
 - docker -- linux, apache, mysql, nginx, php 7.4
@@ -24,7 +35,7 @@ The project uses following environment
 - codesniffer
 - goldspecdigital/laravel-eloquent-uuid
 
-##Installation
+##Detailed Installation
 - Run a docker desktop on your machine
 - Goto your development folder and download this code
 - Run a docker build command and it should copy all the required images
